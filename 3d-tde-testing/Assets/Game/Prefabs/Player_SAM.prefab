@@ -61,7 +61,7 @@ MonoBehaviour:
   CharacterDimension: 0
   CharacterType: 0
   PlayerID: Player1
-  CharacterAnimator: {fileID: 0}
+  CharacterAnimator: {fileID: 8539852501254068265}
   UseDefaultMecanim: 1
   RunAnimatorSanityChecks: 0
   DisableAnimatorLogs: 1
@@ -91,7 +91,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 1.8
-  m_Radius: 0.18
+  m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gravity: 40
-  GravityActive: 1
+  GravityActive: 0
   CrouchedRaycastLengthMultiplier: 1
   PerformCardinalObstacleRaycastDetection: 0
   Speed: {x: 0, y: 0, z: 0}
@@ -225,7 +225,7 @@ MonoBehaviour:
   RotationMode: 1
   CharacterRotationAuthorized: 1
   ShouldRotateToFaceMovementDirection: 1
-  MovementRotationSpeed: 1
+  MovementRotationSpeed: 2
   MovementRotatingModel: {fileID: 8634510877289820953}
   RotateToFaceMovementDirectionSpeed: 7
   AbsoluteThresholdMovement: 0.5
@@ -265,9 +265,9 @@ MonoBehaviour:
   ForcedCrouch: 0
   InputMode: 0
   CrawlAuthorized: 1
-  CrawlSpeed: 4
-  ResizeColliderWhenCrouched: 0
-  TranslateColliderOnCrouch: 0
+  CrawlSpeed: 2
+  ResizeColliderWhenCrouched: 1
+  TranslateColliderOnCrouch: 1
   CrouchedColliderHeight: 1.25
   ObjectsToOffset: []
   OffsetCrouch: {x: 0, y: 0, z: 0}
@@ -297,8 +297,8 @@ MonoBehaviour:
   BlockingWeaponStates: 
   JumpProportionalToPress: 1
   MinimumPressTime: 0.4
-  JumpForce: 800
-  JumpHeight: 4
+  JumpForce: 350
+  JumpHeight: 1.6
   CanJumpOnTooSteepSlopes: 1
   ResetJumpsOnTooSteepSlopes: 0
   NumberOfJumps: 1
@@ -329,7 +329,7 @@ MonoBehaviour:
   DashMode: 1
   DashSpace: 0
   DashDirection: {x: 0, y: 0, z: 1}
-  DashDistance: 10
+  DashDistance: 3.5
   DashDuration: 0.5
   DashCurve:
     serializedVersion: 2
@@ -358,10 +358,10 @@ MonoBehaviour:
   AllowDashWhenJumping: 0
   Cooldown:
     Unlimited: 0
-    ConsumptionDuration: 2
-    PauseOnEmptyDuration: 1
-    RefillDuration: 1
-    CanInterruptRefill: 1
+    ConsumptionDuration: 5
+    PauseOnEmptyDuration: 5
+    RefillDuration: 5
+    CanInterruptRefill: 0
     CooldownState: 0
     CurrentDurationLeft: 0
   InvincibleWhileDashing: 0
@@ -391,7 +391,7 @@ MonoBehaviour:
   InputAuthorized: 1
   AnalogInput: 0
   ScriptDrivenInput: 0
-  WalkSpeed: 6
+  WalkSpeed: 3
   ShouldSetMovement: 1
   IdleThreshold: 0.05
   Acceleration: 10
@@ -421,7 +421,7 @@ MonoBehaviour:
   BlockingMovementStates: 
   BlockingConditionStates: 
   BlockingWeaponStates: 
-  RunSpeed: 16
+  RunSpeed: 7
   AutoRun: 0
   AutoRunThreshold: 0.6
 --- !u!114 &7453049193260955943
@@ -609,6 +609,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 95641866050039672, guid: d461c345ada76d14f94fe72087cec0f9,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0b1052866e6d0f84ba8c01d83331b346, type: 2}
+    - target: {fileID: 95641866050039672, guid: d461c345ada76d14f94fe72087cec0f9,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 1107979916992240, guid: d461c345ada76d14f94fe72087cec0f9, type: 3}
@@ -622,6 +632,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d461c345ada76d14f94fe72087cec0f9, type: 3}
+--- !u!95 &8539852501254068265 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95641866050039672, guid: d461c345ada76d14f94fe72087cec0f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 8633522942315837265}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8634510877289820953 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1018949230691400, guid: d461c345ada76d14f94fe72087cec0f9,
